@@ -17,9 +17,12 @@
     };
   };
 
+  dotenv.enable = true;
+
   services.postgres = {
     enable = true;
     initialScript = "CREATE USER postgres SUPERUSER;";
+    listen_addresses = "127.0.0.1";
   };
 
   enterShell = ''
