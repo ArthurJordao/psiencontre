@@ -4,8 +4,8 @@
   "version": "6",
   "dialect": "postgresql",
   "tables": {
-    "public.orderandeat-t3-stack_account": {
-      "name": "orderandeat-t3-stack_account",
+    "public.psiencontre_account": {
+      "name": "psiencontre_account",
       "schema": "",
       "columns": {
         "user_id": {
@@ -85,10 +85,10 @@
         }
       },
       "foreignKeys": {
-        "orderandeat-t3-stack_account_user_id_orderandeat-t3-stack_user_id_fk": {
-          "name": "orderandeat-t3-stack_account_user_id_orderandeat-t3-stack_user_id_fk",
-          "tableFrom": "orderandeat-t3-stack_account",
-          "tableTo": "orderandeat-t3-stack_user",
+        "psiencontre_account_user_id_psiencontre_user_id_fk": {
+          "name": "psiencontre_account_user_id_psiencontre_user_id_fk",
+          "tableFrom": "psiencontre_account",
+          "tableTo": "psiencontre_user",
           "columnsFrom": [
             "user_id"
           ],
@@ -100,8 +100,8 @@
         }
       },
       "compositePrimaryKeys": {
-        "orderandeat-t3-stack_account_provider_provider_account_id_pk": {
-          "name": "orderandeat-t3-stack_account_provider_provider_account_id_pk",
+        "psiencontre_account_provider_provider_account_id_pk": {
+          "name": "psiencontre_account_provider_provider_account_id_pk",
           "columns": [
             "provider",
             "provider_account_id"
@@ -110,8 +110,8 @@
       },
       "uniqueConstraints": {}
     },
-    "public.orderandeat-t3-stack_post": {
-      "name": "orderandeat-t3-stack_post",
+    "public.psiencontre_post": {
+      "name": "psiencontre_post",
       "schema": "",
       "columns": {
         "id": {
@@ -163,10 +163,10 @@
         }
       },
       "foreignKeys": {
-        "orderandeat-t3-stack_post_created_by_orderandeat-t3-stack_user_id_fk": {
-          "name": "orderandeat-t3-stack_post_created_by_orderandeat-t3-stack_user_id_fk",
-          "tableFrom": "orderandeat-t3-stack_post",
-          "tableTo": "orderandeat-t3-stack_user",
+        "psiencontre_post_created_by_psiencontre_user_id_fk": {
+          "name": "psiencontre_post_created_by_psiencontre_user_id_fk",
+          "tableFrom": "psiencontre_post",
+          "tableTo": "psiencontre_user",
           "columnsFrom": [
             "created_by"
           ],
@@ -180,8 +180,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "public.orderandeat-t3-stack_session": {
-      "name": "orderandeat-t3-stack_session",
+    "public.psiencontre_session": {
+      "name": "psiencontre_session",
       "schema": "",
       "columns": {
         "session_token": {
@@ -213,10 +213,10 @@
         }
       },
       "foreignKeys": {
-        "orderandeat-t3-stack_session_user_id_orderandeat-t3-stack_user_id_fk": {
-          "name": "orderandeat-t3-stack_session_user_id_orderandeat-t3-stack_user_id_fk",
-          "tableFrom": "orderandeat-t3-stack_session",
-          "tableTo": "orderandeat-t3-stack_user",
+        "psiencontre_session_user_id_psiencontre_user_id_fk": {
+          "name": "psiencontre_session_user_id_psiencontre_user_id_fk",
+          "tableFrom": "psiencontre_session",
+          "tableTo": "psiencontre_user",
           "columnsFrom": [
             "user_id"
           ],
@@ -230,8 +230,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "public.orderandeat-t3-stack_user": {
-      "name": "orderandeat-t3-stack_user",
+    "public.psiencontre_user": {
+      "name": "psiencontre_user",
       "schema": "",
       "columns": {
         "id": {
@@ -271,8 +271,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "public.orderandeat-t3-stack_verification_token": {
-      "name": "orderandeat-t3-stack_verification_token",
+    "public.psiencontre_verification_token": {
+      "name": "psiencontre_verification_token",
       "schema": "",
       "columns": {
         "identifier": {
@@ -297,8 +297,8 @@
       "indexes": {},
       "foreignKeys": {},
       "compositePrimaryKeys": {
-        "orderandeat-t3-stack_verification_token_identifier_token_pk": {
-          "name": "orderandeat-t3-stack_verification_token_identifier_token_pk",
+        "psiencontre_verification_token_identifier_token_pk": {
+          "name": "psiencontre_verification_token_identifier_token_pk",
           "columns": [
             "identifier",
             "token"

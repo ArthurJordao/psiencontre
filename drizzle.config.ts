@@ -8,5 +8,5 @@ export default {
   dbCredentials: {
     url: env.DATABASE_URL,
   },
-  tablesFilter: ["orderandeat-t3-stack_*"],
+  tablesFilter: ["psiencontre_*"],
 } satisfies Config;
