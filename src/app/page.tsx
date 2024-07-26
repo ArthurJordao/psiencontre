@@ -1,67 +1,104 @@
-import Link from "next/link";
+import Link from "next/link"
+import { CircleUser } from "lucide-react"
+import { Button } from "~/components/ui/button"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "~/components/ui/dropdown-menu"
 
-import { LatestPost } from "~/app/_components/post";
-import { getServerAuthSession } from "~/server/auth";
-import { api, HydrateClient } from "~/trpc/server";
-
-export default async function Home() {
-  const hello = await api.post.hello({ text: "from tRPC" });
-  const session = await getServerAuthSession();
-
-  void api.post.getLatest.prefetch();
-
+export default function Home() {
   return (
-    <HydrateClient>
-      <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
-        <div className="container flex flex-col items-center justify-center gap-12 px-4 py-16">
-          <h1 className="text-5xl font-extrabold tracking-tight sm:text-[5rem]">
-            Create <span className="text-[hsl(280,100%,70%)]">T3</span> App
-          </h1>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/usage/first-steps"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">First Steps →</h3>
-              <div className="text-lg">
-                Just the basics - Everything you need to know to set up your
-                database and authentication.
-              </div>
-            </Link>
-            <Link
-              className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 hover:bg-white/20"
-              href="https://create.t3.gg/en/introduction"
-              target="_blank"
-            >
-              <h3 className="text-2xl font-bold">Documentation →</h3>
-              <div className="text-lg">
-                Learn more about Create T3 App, the libraries it uses, and how
-                to deploy it.
-              </div>
-            </Link>
-          </div>
-          <div className="flex flex-col items-center gap-2">
-            <p className="text-2xl text-white">
-              {hello ? hello.greeting : "Loading tRPC query..."}
-            </p>
+    <div className="flex min-h-screen w-full flex-col">
+      <header className="sticky top-0 flex h-16 items-center gap-4 border-b bg-background px-4 md:px-6">
+        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
+          <Link
+            href="#"
+            className="flex items-center gap-2 text-lg font-semibold md:text-base text-primary"
+          >
+            Psiencontre
+          </Link>
+        </nav>
+        <div className="flex w-full items-center gap-4 md:ml-auto md:gap-2 lg:gap-4">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild className="ml-auto flex-1 sm:flex-initial">
+              <Button variant="secondary" size="icon" className="rounded-full">
+                <CircleUser className="h-5 w-5" />
+                <span className="sr-only">Toggle user menu</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuLabel>My Account</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Settings</DropdownMenuItem>
+              <DropdownMenuItem>Support</DropdownMenuItem>
+              <DropdownMenuSeparator />
+              <DropdownMenuItem>Logout</DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
+        </div>
+      </header>
+      <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 bg-muted/40 p-4 md:gap-8 md:p-10">
+        <div className="mx-auto max-w-6xl">
+          <h1 className="text-3xl font-semibold text-center">Encontre seu psicólogo online</h1>
+          <p className="mt-4 text-center text-muted-foreground">Psiencontre é uma plataforma onde você pode encontrar um psicólogo que atenda melhor suas necessidades. Temos um catálogo com ótimos psicólogos em uma plataforma 100% gratuita para você e para seu terapeuta.</p>
+        </div>
 
-            <div className="flex flex-col items-center justify-center gap-4">
-              <p className="text-center text-2xl text-white">
-                {session && <span>Logged in as {session.user?.name}</span>}
-              </p>
-              <Link
-                href={session ? "/api/auth/signout" : "/api/auth/signin"}
-                className="rounded-full bg-white/10 px-10 py-3 font-semibold no-underline transition hover:bg-white/20"
-              >
-                {session ? "Sign out" : "Sign in"}
-              </Link>
+        <section className="mt-10 mx-auto max-w-6xl">
+          <h2 className="text-2xl font-semibold">Sobre Nós</h2>
+          <p className="mt-4 text-muted-foreground">Psiencontre foi criado para facilitar a conexão entre pacientes e psicólogos qualificados. Nossa missão é oferecer uma plataforma acessível e eficiente para todos.</p>
+        </section>
+
+
+        <section className="mt-10 mx-auto max-w-6xl">
+          <h2 className="text-2xl font-semibold">Como Funciona</h2>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 1: Crie uma Conta</h3>
+              <p className="mt-2 text-muted-foreground">Crie uma conta gratuita em nossa plataforma para começar a procurar por psicólogos.</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 2: Pesquise Psicólogos</h3>
+              <p className="mt-2 text-muted-foreground">Utilize nossos filtros para encontrar o profissional que melhor atenda suas necessidades.</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 3: Agende uma Sessão</h3>
+              <p className="mt-2 text-muted-foreground">Entre em contato com o psicólogo escolhido e agende uma sessão no melhor horário para você.</p>
             </div>
           </div>
+        </section>
 
-          {session?.user && <LatestPost />}
-        </div>
+        <section className="mt-10 mx-auto max-w-6xl">
+          <h2 className="text-2xl font-semibold">Instruções para Psicólogos</h2>
+          <div className="mt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 1: Registre-se</h3>
+              <p className="mt-2 text-muted-foreground">Crie uma conta em nossa plataforma fornecendo suas informações profissionais e de contato.</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 2: Complete Seu Perfil</h3>
+              <p className="mt-2 text-muted-foreground">Preencha todos os detalhes do seu perfil, incluindo sua especialização, experiência e disponibilidade.</p>
+            </div>
+            <div className="bg-white p-4 rounded shadow">
+              <h3 className="text-xl font-semibold">Passo 3: Conecte-se com Pacientes</h3>
+              <p className="mt-2 text-muted-foreground">Responda às solicitações dos pacientes e agende sessões de acordo com sua disponibilidade.</p>
+            </div>
+          </div>
+          <div className="mt-6 bg-white p-4 rounded shadow">
+            <h3 className="text-xl font-semibold">Dicas para um Perfil de Sucesso</h3>
+            <ul className="mt-2 list-disc pl-5 text-muted-foreground">
+              <li>Mantenha seu perfil atualizado.</li>
+              <li>Adicione uma foto profissional.</li>
+              <li>Escreva uma biografia detalhada e amigável.</li>
+              <li>Seja claro sobre suas especializações e abordagem terapêutica.</li>
+              <li>Responda prontamente às mensagens dos pacientes.</li>
+            </ul>
+          </div>
+        </section>
       </main>
-    </HydrateClient>
-  );
+    </div>
+  )
 }
