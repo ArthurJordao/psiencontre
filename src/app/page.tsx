@@ -45,11 +45,13 @@ export default function Home() {
         <div className="mx-auto max-w-6xl">
           <h1 className="text-3xl font-semibold text-center text-primary">Encontre seu psicólogo online</h1>
           <p className="mt-4 text-center text-muted-foreground">Psiencontre é uma plataforma onde você pode encontrar um psicólogo que atenda melhor suas necessidades. Temos um catálogo com ótimos psicólogos em uma plataforma 100% gratuita para você e para seu terapeuta.</p>
+          <img className="mt-4 mx-auto" src="https://via.placeholder.com/600x400" alt="Placeholder" />
         </div>
 
         <section className="mt-10 mx-auto max-w-6xl">
           <h2 className="text-2xl font-semibold text-primary">Sobre Nós</h2>
           <p className="mt-4 text-muted-foreground">Psiencontre foi criado para facilitar a conexão entre pacientes e psicólogos qualificados. Nossa missão é oferecer uma plataforma acessível e eficiente para todos.</p>
+          <img className="mt-4 mx-auto" src="https://via.placeholder.com/600x400" alt="Placeholder" />
         </section>
 
         <section className="mt-10 mx-auto max-w-6xl">
