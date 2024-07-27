@@ -1,29 +1,17 @@
-# Create T3 App
+# Psiencontre
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+Psiencontre é um aplicativo 100% open source projetado para ajudar as pessoas a encontrar psicólogos de maneira rápida e fácil.
 
-## What's next? How do I make an app with this?
+Atualmente, existem muitos aplicativos que facilitam a localização de profissionais em diversas áreas. No entanto, esses aplicativos geralmente cobram taxas elevadas sobre o valor que os profissionais recebem.
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+Nosso objetivo com o Psiencontre é fornecer uma plataforma que possa ajudar os psicólogos a encontrar clientes com mais facilidade e sem a necessidade de pagar taxas exorbitantes. Além disso, queremos ajudar os pacientes a encontrar um profissional que se adapte às suas necessidades e realidade.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Stack
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+Esse app é feito com T3 stack, que utiliza NextJS, tailwind, TRPC, e outras tecnologias. Sinta-se livre para contribuir com o projeto.
 
-## Learn More
+## Dedicação
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
+Dedico esse trabalho a todos os psicólogos que estão trabalhando duro para ajudar as pessoas a superar seus problemas. Vocês são incríveis!
 
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+Também dedico a minha companheira de vida Isabele Rocha Tenca a qual me inspirou a fazer essa ferramenta para ajudar as pessoas. Ela é uma psicóloga incrível e desejo sucesso em sua carreira.
