@@ -58,7 +58,7 @@ export default function Home() {
           <p className="mt-4 text-muted-foreground text-lg">Psiencontre é uma plataforma onde você pode encontrar um psicólogo que atenda melhor suas necessidades.</p>
           <div className="flex flex-row flex-1 gap-4 items-baseline">
             <Select>
-              <SelectTrigger>
+              <SelectTrigger aria-label="Selecione a abordagem desejada">
                 <SelectValue placeholder="Selectione a abordagem desejada" />
               </SelectTrigger>
               <SelectContent>
