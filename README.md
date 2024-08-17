@@ -15,3 +15,21 @@ Esse app é feito com T3 stack, que utiliza NextJS, tailwind, TRPC, e outras tec
 Dedico esse trabalho a todos os psicólogos que estão trabalhando duro para ajudar as pessoas a superar seus problemas. Vocês são incríveis!
 
 Também dedico a minha companheira de vida Isabele Rocha Tenca a qual me inspirou a fazer essa ferramenta para ajudar as pessoas. Ela é uma psicóloga incrível e desejo sucesso em sua carreira.
+
+## TODO
+
+- [ ] Finalizar a landing page.
+- [ ] Adicionar autenticação para psicólogos via google.
+- [ ] Adicionar modelo para o perfil do psicólogo.
+- [ ] Adicionar visualização de perfil de psicólogo.
+- [ ] Formulário para completar perfil
+- [ ] Image upload.
+- [ ] Implementar busca de perfil.
+- [ ] Algoritmo para ranquear perfis.
+- [ ] Implementar formulário de contato.
+- [ ] Remover usuário.
+- [ ] Analytics.
+- [ ] Ratelimiting.
+- [ ] Deployment.
+- [ ] Testes.
+- [ ] Error management.
