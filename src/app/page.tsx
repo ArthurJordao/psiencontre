@@ -9,6 +9,15 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "~/components/ui/dropdown-menu"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "~/components/ui/select"
 
 export default function Home() {
   return (
@@ -45,7 +54,32 @@ export default function Home() {
         <div className="pt-60 mx-auto max-w-6xl flex flex-col items-center">
           <h1 className="text-3xl font-semibold text-center">Encontre seu psicólogo hoje</h1>
           <p className="mt-4 text-center text-muted-foreground">Psiencontre é uma plataforma onde você pode encontrar um psicólogo que atenda melhor suas necessidades.</p>
-          <div><Button className="uppercase mt-4">Procurar</Button></div>
+          <div className="flex flex-row flex-1 gap-4 items-baseline">
+            <Select>
+              <SelectTrigger className="w-[500px]">
+                <SelectValue placeholder="Selectione a abordagem desejada" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectGroup>
+                  <SelectLabel>Psicanalise</SelectLabel>
+                  <SelectItem value="apple">Winicott</SelectItem>
+                  <SelectItem value="banana">Lacan</SelectItem>
+                  <SelectItem value="blueberry">Freud</SelectItem>
+                  <SelectItem value="grapes">Yung</SelectItem>
+                  <SelectItem value="pineapple">Melanie Klain</SelectItem>
+                </SelectGroup>
+                <SelectGroup>
+                  <SelectLabel>Behaviorismo</SelectLabel>
+                  <SelectItem value="apple">TCC</SelectItem>
+                  <SelectItem value="banana">Análise do comportamento</SelectItem>
+                  <SelectItem value="blueberry">XPTO</SelectItem>
+                  <SelectItem value="grapes">Blah</SelectItem>
+                  <SelectItem value="pineapple">Seriously bro this is crazy</SelectItem>
+                </SelectGroup>
+              </SelectContent>
+            </Select>
+            <Button className="uppercase mt-4">Procurar</Button>
+          </div>
           <Button asChild variant="outline" className="uppercase mt-4"><Link href="#how-it-works">Saiba mais</Link></Button>
           <Link href="/psicologo" className="text-muted-foreground mt-16">Clique aqui se for psicólogo</Link>
         </div>
