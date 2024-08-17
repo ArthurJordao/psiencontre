@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </header>
       <main className="h-screen px-4">
-        <div className="pt-60 md:mx-auto md:max-w-4xl flex flex-col">
+        <div className="md:pt-60 md:mx-auto md:max-w-4xl flex flex-col pt-32">
           <h1 className="text-3xl font-semibold">Encontre seu psicólogo hoje</h1>
           <p className="mt-4 text-muted-foreground text-lg">Psiencontre é uma plataforma onde você pode encontrar um psicólogo que atenda melhor suas necessidades.</p>
           <div className="flex flex-row flex-1 gap-4 items-baseline">
