@@ -64,24 +64,23 @@ export default function Home() {
               <SelectContent>
                 <SelectGroup>
                   <SelectLabel>Psicanalise</SelectLabel>
-                  <SelectItem value="apple">Winicott</SelectItem>
-                  <SelectItem value="banana">Lacan</SelectItem>
-                  <SelectItem value="blueberry">Freud</SelectItem>
-                  <SelectItem value="grapes">Yung</SelectItem>
-                  <SelectItem value="pineapple">Melanie Klain</SelectItem>
+                  <SelectItem value="freudiana"> Psicanálise Freudiana</SelectItem>
+                  <SelectItem value="junguiana">Psicanálise Junguiana</SelectItem>
+                  <SelectItem value="lacaniana">Psicanálise Lacaniana</SelectItem>
+                  <SelectItem value="kleiniana">Psicanálise Kleiniana</SelectItem>
+                  <SelectItem value="winnicottiana">Psicanálise Winnicottiana</SelectItem>
                 </SelectGroup>
                 <SelectGroup>
                   <SelectLabel>Behaviorismo</SelectLabel>
-                  <SelectItem value="apple">TCC</SelectItem>
-                  <SelectItem value="banana">Análise do comportamento</SelectItem>
-                  <SelectItem value="blueberry">XPTO</SelectItem>
-                  <SelectItem value="grapes">Blah</SelectItem>
-                  <SelectItem value="pineapple">Seriously bro this is crazy</SelectItem>
+                  <SelectItem value="tcc">Terapia cognitivo comportamental (TCC)</SelectItem>
+                  <SelectItem value="comportamental">Terapia Comportamental</SelectItem>
+                  <SelectItem value="dialetica">Comportamental dialética (DBT)</SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>
             <Button className="uppercase mt-4">Procurar</Button>
           </div>
+          <Button asChild variant="link" className="mt-4 text-muted-foreground"><Link href="/linhas-psicologia">Gostaria de entender mais sobre as diferentes linhas</Link></Button>
           <Button asChild variant="link" className="mt-16 text-base"><Link href="/psicologo" >Clique aqui se for psicólogo</Link></Button>
         </div>
       </main>
