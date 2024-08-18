@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Button } from "~/components/ui/button"
 import { getServerAuthSession } from "~/server/auth"
-import Navbar from "../_components/navbar";
+import Navbar from "~/app/_components/navbar";
 import { redirect } from "next/navigation";
 
 export default async function Home() {
