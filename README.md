@@ -18,7 +18,7 @@ Também dedico a minha companheira de vida Isabele Rocha Tenca a qual me inspiro
 
 ## TODO
 
-- [ ] Finalizar a landing page.
+- [x] Finalizar a landing page.
 - [ ] Adicionar autenticação para psicólogos via google.
 - [ ] Adicionar modelo para o perfil do psicólogo.
 - [ ] Adicionar visualização de perfil de psicólogo.
