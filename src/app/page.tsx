@@ -43,7 +43,7 @@ export default async function Home() {
           <Button className="uppercase mt-4">Procurar</Button>
         </div>
         <Button asChild variant="link" className="mt-4 text-muted-foreground"><Link href="/linhas-psicologia">Gostaria de entender mais sobre as diferentes linhas</Link></Button>
-        <Button asChild variant="link" className="mt-16 text-base"><Link href="/psicologo" >Clique aqui se for psicólogo</Link></Button>
+        <Button asChild variant="link" className="mt-16 text-base"><Link href="/psicologos" >Clique aqui se for psicólogo</Link></Button>
       </main>
     </div>
   )
