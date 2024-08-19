@@ -2,7 +2,7 @@
 import { getProviders, signIn } from "next-auth/react"
 
 export default async function SignIn() {
-  const providers = await getProviders() || []
+  const providers = await getProviders() ?? []
   return (
     <>
       {Object.values(providers).map((provider) => (
