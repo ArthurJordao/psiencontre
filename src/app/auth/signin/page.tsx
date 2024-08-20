@@ -7,7 +7,7 @@ export default async function SignIn() {
     <>
       {Object.values(providers).map((provider) => (
         <div key={provider.name}>
-          <button onClick={() => signIn(provider.id, { callbackUrl: "/meu-perfil" })}>
+          <button onClick={() => signIn(provider.id)}>
             Sign in with {provider.name}
           </button>
         </div>
